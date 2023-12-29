@@ -105,7 +105,7 @@ const Header = () => {
         <div className="row">
           <div className="col-xl-3">
             <div className="header__logo">
-              <h1>Sivi SHOP</h1>
+              <h1>SiVi SHOP</h1>
             </div>
           </div>
           <div className="col-xl-6">
@@ -114,6 +114,15 @@ const Header = () => {
                 {menus?.map((menu, menuKey) => (
                   <li li key={menuKey} className={menu === 0 ? "active" : ""}>
                     <Link to="{menu?.path}">{menu?.name}</Link>
+                    {menu.child && (
+                      <ul className="header__menu__dropdown">
+                        {menu.child.map((childItem, childKey) => (
+                            <li key={`${menuKey}-${childKey}`}>
+                                <Link to={childItem.path}>{childItem.name}</Link>
+                            </li>
+                        ))}
+                      </ul>
+                    )}
                   </li>
                 ))}
               </ul>
