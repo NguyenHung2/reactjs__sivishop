@@ -15,7 +15,7 @@ import { formatter } from "utils/formater";
 import { ROUTERS } from "utils/router";
 const Header = () => {
   // eslint-disable-next-line no-unused-vars
-  const [menus, setMenus] = useState([
+  const [menus] = useState([
     {
       name: "Trang chủ",
       path: ROUTERS.USER.HOME,
@@ -117,9 +117,9 @@ const Header = () => {
                     {menu.child && (
                       <ul className="header__menu__dropdown">
                         {menu.child.map((childItem, childKey) => (
-                            <li key={`${menuKey}-${childKey}`}>
-                                <Link to={childItem.path}>{childItem.name}</Link>
-                            </li>
+                          <li key={`${menuKey}-${childKey}`}>
+                            <Link to={childItem.path}>{childItem.name}</Link>
+                          </li>
                         ))}
                       </ul>
                     )}
@@ -142,6 +142,15 @@ const Header = () => {
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-3">
+            div
+          </div>
+          <div className="col-lg-9">Phai</div>
         </div>
       </div>
     </>
