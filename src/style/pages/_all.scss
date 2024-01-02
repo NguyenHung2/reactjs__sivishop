@@ -42,6 +42,11 @@ body {
     max-width: 50%;
 }
 
+.col-lg-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
 .button-submit {
     font-size: 14px;
     color: #ffffff;
@@ -64,7 +69,7 @@ body {
         flex: 0 0 50%;
         max-width: 50%;
     }
-} 
+}
 
 @include Responsive($TABLET_DEVICE) {
     .col-md-6 {
@@ -76,14 +81,14 @@ body {
         flex: 0 0 100%;
         max-width: 100%;
     }
-} 
+}
 
 @include Responsive($MEDIUM_DEVICE) {
     .col-lg-3 {
         flex: 0 0 25%;
         max-width: 25%;
     }
-} 
+}
 
 @include Responsive($WIDE_MOBILE) {
     .col-sm-6 {
@@ -95,11 +100,11 @@ body {
         flex: 0 0 100%;
         max-width: 100%;
     }
-} 
+}
 
 @include Responsive($SMALL_DEVICE) {
     .col-xs-12 {
         flex: 0 0 100%;
         max-width: 100%;
     }
-} 
+}
